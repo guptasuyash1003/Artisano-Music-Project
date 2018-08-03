@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>View Artists - ZAITECH</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/assets/css/main.css" />
+    </head>
+    <body>
+
+        <!-- Header -->
+            <header id="header">
+                <div class="logo"><a href="#">Artisano <span>by ZAITECH</span></a></div>
+                <a href="#menu" class="toggle"><span>Menu</span></a>
+            </header>
+
+        <!-- Nav -->
+            <nav id="menu">
+                <ul class="links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#four">Contact Us</a></li>
+                    
+                </ul>
+            </nav>
+
+                  <section>
+                        <div class="container">
+                             <a href="/tracks/new" class="button special" style="margin-top: 5em">Add New Track</a>
+                             <hr>
+                     
+                          <center>
+                           <div class="inner col-sm-4">
+                             <div class="grid-style">
+                                 <% tracks.forEach(function(track){ %>
+                                <div class="4u$ 12u$">
+                                  <div>
+                                     <div class="box">
+                                         <div class="image fit">
+                                         <img src="/images/musicimage.jpg" alt="" />
+                                         </div>
+                                         <div class="content">
+                                            <header class="align-center">
+                                            <h2><%=track.Name %></h2>
+                                            </header>
+                                            <hr />
+                                            <p> Album: <%= track.Albumid[0].Name %> </p>
+                                            
+                                          <form method="GET" action="/tracks/<%=track._id%>/edit">
+                                            <input type="submit" value="Edit Info">
+                                          </form>
+                                          <span> <form method="GET" action="/tracks/<%=track._id%>/"> 
+                                            <input type="submit" value="Show All Details">
+                                          </form></span>
+                                          <span><form method="POST" action="/tracks/<%=track._id%>?_method=DELETE">  
+                                            <input type="submit" value="Delete Track">
+                                          </form> </span>
+                                         </div>
+                                     </div>                    
+                                  </div>
+                                </div> 
+                                    <% }) %> 
+                          </div>
+                        </div> 
+                        </center> 
+                          
+                    </div>
+                </div>
+            </div>
+            </section>
+
+                <section id="four" class="wrapper style3">
+                <div class="inner">
+                    <header class="align-center">
+                        <h2>Artisano by Zaitech</h2>
+                        <p>Artisano is a web portal designe and developed by ZAITECH TECHNOLOGIES PVT.LIMITED. Artisano helps the users to surf their favourite artists, albums and the tracks which still refreshen their mood when they listem to them. For any assistance <b><i>Contact Us </i>: S.Pace, 10 Number Market, Bhopal <i> Mobile: </i> +91-9824022537</b> </p>
+                    </header>
+                </div>
+            </section>
+
+        
+        <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/skel.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "z2p",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.9",
+    "express": "^4.16.3",
+    "express-sanitizer": "^1.0.4",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.0.16",
+    "nodemon": "^1.18.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
