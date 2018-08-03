@@ -10,7 +10,8 @@ var express = require("express"),
     albums = require('./routes/albums'),
     tracks = require('./routes/tracks');
     
-mongoose.connect("mongodb://localhost/z2p");
+// mongoose.connect("mongodb://localhost/z2p");
+mongoose.connect("mongodb://suyash:suyash123@ds113122.mlab.com:13122/artisano");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSanitizer());
 app.set("view engine", "ejs");
